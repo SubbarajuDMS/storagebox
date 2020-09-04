@@ -22,7 +22,6 @@ if ( force_ssl_admin() && ! is_ssl() ) {
 	}
 }
 
-
 /**
  * Output the login page header.
  *
