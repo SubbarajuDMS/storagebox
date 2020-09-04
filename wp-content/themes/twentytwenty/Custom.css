@@ -1,0 +1,39 @@
+﻿#wpcf7-f149-o1 textarea {
+    min-height: 65px !important;
+}
+#menu-sb-footer-menu-1{
+    background:#000000 !important;
+}
+#menu-sb-footer-menu-1 .sub-menu li > a {
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+#menu-sb-footer-menu-1 .nocls {
+    margin: 0px !important;
+}
+    #menu-sb-footer-menu-1 li > a {
+        padding:15px 0px !important;
+    }
+#menu-sb-footer-menu-1 .sub-menu {
+    border-top: 5px solid #bcbe32;
+    border-radius: 0;
+    z-index: 100000;
+}
+#menu-sb-footer-menu-1 .menu-item-has-children
+{
+    width:75%;
+}
+#menu-sb-header-business-hours li {
+    border:none !important;
+}
+#menu-sb-header-business-hours .sub-menu {
+    border-top: 5px solid #bcbe32;
+    border-radius: 0;
+    z-index: 100000;
+    left:0% !important;
+    top:100% !important;
+}
+#menu-sb-header-business-hours .sub-menu li > a {
+        color: #000000;
+        padding:10px 20px;
+    }
