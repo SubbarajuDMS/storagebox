@@ -6469,3 +6469,14 @@ a.to-the-top > * {
 		top: 0;
 	}
 }
+
+
+/*---------- Suggested by Subbu ---------*/
+
+.entry-title
+{
+    display:none !important;
+}
+.footer-nav-widgets-wrapper {
+    display: none !important;
+}

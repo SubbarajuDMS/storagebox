@@ -37,3 +37,54 @@
         color: #000000;
         padding:10px 20px;
     }
+
+
+/*-Bhagavana-*/
+nav select {
+  display: none;left:0;
+}
+
+nav ul li {
+list-style:none;
+}
+
+nav ul li a {
+border-bottom:1px solid #ebebeb;color:#1a1a1a;
+display:block;padding:5px;
+}
+
+nav ul li a.active {
+border-bottom:1px solid #abb43a;color:#abb43a;
+}
+
+h2.elementor-image-box-title, h3.elementor-image-box-title {
+    margin: 0.5em 0;
+}
+
+.dr-list {
+width:70%;
+border:1px solid #ebebeb;padding:5px;
+}
+
+.offer-txt {
+text-align:center;display:block;color:#fff;font-weight:100;font-size:68px;
+}
+
+.big-txt-color {
+color:#bcbe32; font-weight:900;
+}
+
+.big-txt {
+font-weight:900;
+}
+
+
+@media (max-width: 720px) {
+  nav ul     { display: none; }
+  nav select { display: inline-block;                  
+    width: 100%;
+    border: 1px solid #ebebeb;
+    padding: 10px;
+}
+  }
+
