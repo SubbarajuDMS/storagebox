@@ -1,20 +1,23 @@
 === Elements kit Elementor addons (Header & Footer Builder, Mega Menu Builder, Layout Library) ===
 Contributors: Ataurr, wpmet, emrnco, pobonpaul1994, easin55474, khalidjubair
 Tags: elementor addons, mega menu, header footer builder, elements, elementor extensions, elementor modules, page builder addons, elementor addon, elementor widget, addons
-Requires at least: 4.6
+Requires at least: 5.0
 Tested up to: 5.5
-Stable tag: 1.5.12
-Requires PHP: 5.6
+Stable tag: 2.0.3
+Requires PHP: 7.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Elementskit All in one addon for Elementor page builder. It includes most comprehensive modules, such as header footer builder, mega menu Builder Layout kit etc under the hood. It has 40+ custom widgets to create any sites with ease.
+ElementsKit All in one addon for Elementor page builder. It includes most comprehensive modules, such as header footer builder, mega menu Builder Layout kit etc under the hood. It has 40+ custom widgets to create any sites with ease.
 
 == Description ==
 
+### **ATTENTION:** ElementsKit  2.0 Out with huge code optimisation and speed optimization. If you faced any issue please contact our team   [ from here ](https://help.wpmet.com/) ###
+
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ECFC0QregXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Elementskit is an ultimate All in one addon for Elementor Page Builder. It includes most comprehensive modules, such as Header Footer Builder, Mega Menu Builder Layoutkit etc under the one hood. It has 55+ custom widgets to create any sites with ease. It has some most unique and powerful custom controls for Elementor, such as Image Picker, Ajax Select2, Advanced Widget and many more. Why do you need multiple plugins? Where everything under the one hood?
+ElementsKit is an ultimate All in one addon for Elementor Page Builder. It includes most comprehensive modules, such as Header Footer Builder, Mega Menu Builder Layoutkit etc under the one hood. It has 55+ custom widgets to create any sites with ease. It has some most unique and powerful custom controls for Elementor, such as Image Picker, Ajax Select2, Advanced Widget and many more. Why do you need multiple plugins? Where everything under the one hood?
 
 
 **Elements kit** Elementor Addon have Exclusive features that blow your mind. Like our Mega Menu Builder, Header and Footer Builder layout library, One Page Scroll, Sticky Content, Parallax Effects, you will get tons of Premium features that you have never imagined. 
@@ -51,7 +54,7 @@ Elementskit is an ultimate All in one addon for Elementor Page Builder. It inclu
 
 == Layoutkit library ==
 
-With Elementskit we have Layout library features where over 7+ ready-made home available and 300+ ready-made section available. Just click the layout icon and insert it into your site, it's so easy to use without any hassle like import JSON.  You will get a complete native feel when you use this.
+With ElementsKit we have Layout library features where over 7+ ready-made home available and 300+ ready-made section available. Just click the layout icon and insert it into your site, it's so easy to use without any hassle like import JSON.  You will get a complete native feel when you use this.
 
 == 250+ Ready blocks ==
 Elements Kit All in one elementor addon comes with 250+ readymade blocks.  Make any website on the fly with readymade blocks from the Exclusive layout kit library. You don't need to create from scratch just input the design from layout kit library and modify according to your need that’s it. Your site now ready to launch.
@@ -161,7 +164,7 @@ We have over 40+ elementor widgets with our free plugin. And Every elementor wid
 == Exclusive modules ==
 We have developed Awesome exclusive modules which saved tons of time when you are developing your site. As well it will saved your time to develop your site within shortime.
 
-- Elementskit Header and footer builder We have built this with Elementor builder to provide your introductory content in the header and group of content or links at the footer which will encourage users to take action. Our Elementskit plugin will help you to create your header and footer template with a logo and menus. Also you can use the constants in pro version to show any page you like. there are three types of conditions you can select such as Entire Site, Singular, and Archive. Basically, you can choose which page you want to add your Header and Footer. there is an activation option like you can active or inactive the Header and Footer whenever you want.
+- ElementsKit Header and footer builder We have built this with Elementor builder to provide your introductory content in the header and group of content or links at the footer which will encourage users to take action. Our ElementsKit plugin will help you to create your header and footer template with a logo and menus. Also you can use the constants in pro version to show any page you like. there are three types of conditions you can select such as Entire Site, Singular, and Archive. Basically, you can choose which page you want to add your Header and Footer. there is an activation option like you can active or inactive the Header and Footer whenever you want.
 
 -<a href="https://products.wpmet.com/megamenu/">Megamenu builder (PRO Layout)</a> - Develop user experience with your sites and cover all the necessary categories by using mega menu. It’s the best way to navigate the deepest section of your sites with just one click with this drop-down menu. You can build your own mega menu beyond your expectation with our mega menu builder. Our most unique feature is you will have two options  for mobile view to show your submenu, one is  “Builder Content” and another one is “Wp Sub Menu List”. Other pro features are drag and drop menu builder panel, auto add pages, social links menu, display location, pages, content, menu, badge, post, custom links, categories, and many more. Check out our video screencast:
 
@@ -221,11 +224,65 @@ We have developed Awesome exclusive modules which saved tons of time when you ar
 - Sticky content in any place.
 - Header footer in specific page or post.
 - Add Icon and label in the mega menu.
--  Widgets area
+- Widgets area
 
 
 
 == Changelog ==
+Version: 2.0.3
+Fix: Megamenu hidden issue
+Fix: Megamenu dropdown hidden issue
+Fix: Menu fatal error fixed
+Fix: Missing dropdown caret icon in the menu
+Fix: Mobile menu logo and close icon disappear issue
+Fix: Minor nav menu widget text color issue in responsive view
+Fix: ekiticon conflict with other themes
+
+Version: 2.0.2
+Fixed menu issue
+
+
+Version: 2.0.1
+Fixed compatibility issue
+
+Version: 2.0.0
+Fix: Template import issues has been fixed
+Fix: All compatibility issues with elementor latest(3.0.0+) version has been fixed
+Fix: All W3C Markup Validation issues has been successfully validated
+Optimization: 
+- Bundled all CSS files for improving load time and performance by reducing the number of requests.
+    - For Front-end: 15 css files marged & minified into 1 files.
+    - For Back-end: 12 css files marged & minified into 1 files.
+
+- Bundled all JS files for improving load time, performance, conflict by reducing the number of requests.
+    - For Front-end: 20 JS files marged & minified into 1 files.
+    - For Back-end: 22 JS files marged & minified into 1 files.
+
+- In the admin, deffirent css and js file has been separated. It's has been loading based on the setting pages.
+
+- We used lots of third party JS Plugins. But right now we are using elementor supported JS Plugins. Like:
+    1. Slick js
+    2. Magnific JS
+    3. Masonry
+    4. Date picker and so on.
+
+- There was a Huge amount of unused CSS code. We have optimized all of them. 
+
+- There was like 200 lines of JS code which has been optimized. because:
+    - We can use html/css instead of JS like image-accordion etc
+    - Used cached js code(By function) instead of repeated code
+    - Some of the widgets like 'Timeline' widgets had heavy JS code. We make it totally lightweight. Such: Instead of raw scroll functionality, we have used elementor waypoint function.
+
+- We have removed vendor-prefixed extra code and again merged it into a css file.
+
+- Fixed settings page bugs
+
+- Improved settings design for a better look and best UI.
+
+- Added version number for all of our enqueued CSS and js for default browser caching and it will improve overall site performance.
+
+- Improved UI for megamenu widget
+
 Version: 1.5.12
 - Latest elementor 3.0.1 compatibility added
 
