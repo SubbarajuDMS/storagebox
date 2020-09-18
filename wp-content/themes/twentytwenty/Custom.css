@@ -128,5 +128,9 @@ li.elementor-icon-list-item.elementor-inline-item {
     border: 1px solid #ebebeb;
     padding: 10px;position: flex-top;font-family: 'Proxima Nova';
 }
+#masthead .elementor-widget-image .elementor-image img{
+    height: 40px;width: auto;
+}
+
   }
 
