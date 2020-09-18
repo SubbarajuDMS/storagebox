@@ -79,12 +79,25 @@ font-weight:900;
 }
 
 
-@media (max-width: 720px) {
+/*@media (max-width: 720px) {
   nav ul     { display: none; }
   nav select { display: inline-block;                  
     width: 100%;
     border: 1px solid #ebebeb;
     padding: 10px;
 }
-  }
+  }*/
+@media screen and (max-width: 960px) {
+    .mega-menu-main-menu .main-navigation,
+    .mega-menu-main-menu .main-navbar {
+        display: block !important;
+    }
 
+    .mega-menu-main-menu .mobile-navbar {
+        display: none !important;
+    }
+
+    .mega-menu-main-menu .main-navbar .container {
+        padding: 0;
+    }
+}
