@@ -1,65 +1,93 @@
-<<<<<<< HEAD
 ﻿#wpcf7-f149-o1 textarea {
     min-height: 65px !important;
 }
-#menu-sb-footer-menu-1{
-    background:#000000 !important;
+.spaceCalculatorModal .modal-dialog, .reserveModal .modal-dialog, .slider-modal .modal-dialog {
+    left: 0% !important;
 }
-#menu-sb-footer-menu-1 .sub-menu li > a {
-    color: #000000;
-    border-bottom: 1px solid #000000;
-}
-#menu-sb-footer-menu-1 .nocls {
-    margin: 0px !important;
-}
-    #menu-sb-footer-menu-1 li > a {
-        padding:15px 0px !important;
-    }
-#menu-sb-footer-menu-1 .sub-menu {
-    border-top: 5px solid #bcbe32;
-    border-radius: 0;
-    z-index: 100000;
-}
-#menu-sb-footer-menu-1 .menu-item-has-children
+html #facility-self-service-app .facility-self-service-nav-touch-section
 {
-    width:75%;
+    display:inline-flex !important;
+    justify-content:center !important;
 }
+html #facility-self-service-app .facility-self-service-title
+{
+    line-height:36px !important;
+}
+#rapidstor-app .container, #boxshop-app .container, #tenant-accounts-app .container, .modal .container
+{
+    width:100% !important;
+}
+#menu-sb-footer-menu-1 {
+    background: #000000 !important;
+}
+
+    #menu-sb-footer-menu-1 .sub-menu li > a {
+        color: #000000;
+        border-bottom: 1px solid #000000;
+    }
+
+    #menu-sb-footer-menu-1 .nocls {
+        margin: 0px !important;
+    }
+
+    #menu-sb-footer-menu-1 li > a {
+        padding: 15px 0px !important;
+    }
+
+    #menu-sb-footer-menu-1 .sub-menu {
+        border-top: 5px solid #bcbe32;
+        border-radius: 0;
+        z-index: 100000;
+    }
+
+    #menu-sb-footer-menu-1 .menu-item-has-children {
+        width: 75%;
+    }
+
 #menu-sb-header-business-hours li {
-    border:none !important;
+    border: none !important;
 }
+
 #menu-sb-header-business-hours .sub-menu {
     border-top: 5px solid #bcbe32;
     border-radius: 0;
     z-index: 100000;
-    left:0% !important;
-    top:100% !important;
+    left: 0% !important;
+    top: 100% !important;
 }
-#menu-sb-header-business-hours .sub-menu li > a {
+
+    #menu-sb-header-business-hours .sub-menu li > a {
         color: #000000;
-        padding:10px 20px;
+        padding: 10px 20px;
     }
 
 
 /*-Bhagavana-*/
 nav select {
-  display: none;left:0;
+    display: none;
+    left: 0;
 }
 
 nav ul li {
-list-style:none; font-family:'Proxima Nova';font-size:16px;
+    list-style: none;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
 }
 
-nav ul li a {
-border-bottom:1px solid #ebebeb;color:#1a1a1a;
-display:block;padding:5px;
-}
-
-#masthead nav ul li a {
-    border-bottom:none;
+    nav ul li a {
+        border-bottom: 1px solid #ebebeb;
+        color: #1a1a1a;
+        display: block;
+        padding: 5px;
     }
 
+#masthead nav ul li a {
+    border-bottom: none;
+}
+
 nav ul li a.active {
-border-bottom:1px solid #abb43a;color:#abb43a;
+    border-bottom: 1px solid #abb43a;
+    color: #abb43a;
 }
 
 h2.elementor-image-box-title, h3.elementor-image-box-title {
@@ -67,13 +95,22 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
 }
 
 .dr-list {
-width:45%;
-border:1px solid #dadada;padding:5px;
-margin-left:10%;font-family:'Proxima Nova';font-size:16px;font-weight:400;
+    width: 45%;
+    border: 1px solid #dadada;
+    padding: 5px;
+    margin-left: 10%;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .offer-txt {
-text-align:center;display:block;color:#fff;font-weight:100;font-size:68px;font-family:'Proxima Nova';
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-weight: 100;
+    font-size: 68px;
+    font-family: 'Proxima Nova';
 }
 
 .big-txt-color {
@@ -83,10 +120,10 @@ text-align:center;display:block;color:#fff;font-weight:100;font-size:68px;font-f
 }
 
 .big-txt {
-font-weight:900;
+    font-weight: 900;
 }
 
-.SB-bredcrumb-link, .SB-bredcrumb{
+.SB-bredcrumb-link, .SB-bredcrumb {
     font-family: 'Proxima Nova';
     font-size: 12px;
     color: #000;
@@ -94,8 +131,8 @@ font-weight:900;
     font-weight: 600;
 }
 
-.SB-bredcrumb{
-opacity:0.5;
+.SB-bredcrumb {
+    opacity: 0.5;
 }
 
 .elementor-tab-content.elementor-clearfix.elementor-active {
@@ -105,11 +142,10 @@ opacity:0.5;
 .elementor-tab-title.elementor-active {
     background: none !important;
     border: none;
-
 }
 
-.elementor-icon-list-text b{
-    color:#000;
+.elementor-icon-list-text b {
+    color: #000;
 }
 
 li.elementor-icon-list-item.elementor-inline-item {
@@ -118,85 +154,105 @@ li.elementor-icon-list-item.elementor-inline-item {
 
 #masthead li.elementor-icon-list-item.elementor-inline-item {
     width: auto;
-} 
-
-
-
-    @media (max-width: 720px) {
-        nav ul     { display: none; }
-  nav select { display: inline-block;                  
-    width: 100%;
-    border: 1px solid #ebebeb;
-    padding: 10px;position: flex-top;font-family: 'Proxima Nova';
-}
-#masthead .elementor-widget-image .elementor-image img{
-    height: 40px;width: auto;
 }
 
-  }
 
-=======
+
+@media (max-width: 720px) {
+    nav ul {
+        display: none;
+    }
+
+    nav select {
+        display: inline-block;
+        width: 100%;
+        border: 1px solid #ebebeb;
+        padding: 10px;
+        position: flex-top;
+        font-family: 'Proxima Nova';
+    }
+
+    #masthead .elementor-widget-image .elementor-image img {
+        height: 40px;
+        width: auto;
+    }
+}
+
 ﻿#wpcf7-f149-o1 textarea {
     min-height: 65px !important;
 }
-#menu-sb-footer-menu-1{
-    background:#000000 !important;
+
+#menu-sb-footer-menu-1 {
+    background: #000000 !important;
 }
-#menu-sb-footer-menu-1 .sub-menu li > a {
-    color: #000000;
-    border-bottom: 1px solid #000000;
-}
-#menu-sb-footer-menu-1 .nocls {
-    margin: 0px !important;
-}
-    #menu-sb-footer-menu-1 li > a {
-        padding:15px 0px !important;
+
+    #menu-sb-footer-menu-1 .sub-menu li > a {
+        color: #000000;
+        border-bottom: 1px solid #000000;
     }
-#menu-sb-footer-menu-1 .sub-menu {
-    border-top: 5px solid #bcbe32;
-    border-radius: 0;
-    z-index: 100000;
-}
-#menu-sb-footer-menu-1 .menu-item-has-children
-{
-    width:75%;
-}
+
+    #menu-sb-footer-menu-1 .nocls {
+        margin: 0px !important;
+    }
+
+    #menu-sb-footer-menu-1 li > a {
+        padding: 15px 0px !important;
+    }
+
+    #menu-sb-footer-menu-1 .sub-menu {
+        border-top: 5px solid #bcbe32;
+        border-radius: 0;
+        z-index: 100000;
+    }
+
+    #menu-sb-footer-menu-1 .menu-item-has-children {
+        width: 75%;
+    }
+
 #menu-sb-header-business-hours li {
-    border:none !important;
+    border: none !important;
 }
+
 #menu-sb-header-business-hours .sub-menu {
     border-top: 5px solid #bcbe32;
     border-radius: 0;
     z-index: 100000;
-    left:0% !important;
-    top:100% !important;
+    left: 0% !important;
+    top: 100% !important;
 }
-#menu-sb-header-business-hours .sub-menu li > a {
+
+    #menu-sb-header-business-hours .sub-menu li > a {
         color: #000000;
-        padding:10px 20px;
+        padding: 10px 20px;
     }
 
 
 /*-Bhagavana-*/
 nav select {
-  display: none;left:0;
+    display: none;
+    left: 0;
 }
 
 nav ul li {
-list-style:none; font-family:'Proxima Nova';font-size:16px;
+    list-style: none;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
 }
 
-nav ul li a {
-border-bottom:1px solid #ebebeb;color:#1a1a1a;
-display:block;padding:5px;
-}
-
-#masthead nav ul li a {
-    border-bottom:none;
+    nav ul li a {
+        border-bottom: 1px solid #ebebeb;
+        color: #1a1a1a;
+        display: block;
+        padding: 5px;
     }
 
+#masthead nav ul li a {
+    border-bottom: none;
+}
+
 nav ul li a.active {
-border-bottom:1px solid #abb43a;color:#abb43a;
+    border-bottom: 1px solid #abb43a;
+    color: #abb43a;
 }
 
 h2.elementor-image-box-title, h3.elementor-image-box-title {
@@ -204,13 +260,22 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
 }
 
 .dr-list {
-width:45%;
-border:1px solid #dadada;padding:5px;
-margin-left:10%;font-family:'Proxima Nova';font-size:16px;font-weight:400;
+    width: 45%;
+    border: 1px solid #dadada;
+    padding: 5px;
+    margin-left: 10%;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .offer-txt {
-text-align:center;display:block;color:#fff;font-weight:100;font-size:68px;font-family:'Proxima Nova';
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-weight: 100;
+    font-size: 68px;
+    font-family: 'Proxima Nova';
 }
 
 .big-txt-color {
@@ -220,10 +285,10 @@ text-align:center;display:block;color:#fff;font-weight:100;font-size:68px;font-f
 }
 
 .big-txt {
-font-weight:900;
+    font-weight: 900;
 }
 
-.SB-bredcrumb-link, .SB-bredcrumb{
+.SB-bredcrumb-link, .SB-bredcrumb {
     font-family: 'Proxima Nova';
     font-size: 12px;
     color: #000;
@@ -231,8 +296,8 @@ font-weight:900;
     font-weight: 600;
 }
 
-.SB-bredcrumb{
-opacity:0.5;
+.SB-bredcrumb {
+    opacity: 0.5;
 }
 
 .elementor-tab-content.elementor-clearfix.elementor-active {
@@ -242,11 +307,10 @@ opacity:0.5;
 .elementor-tab-title.elementor-active {
     background: none !important;
     border: none;
-
 }
 
-.elementor-icon-list-text b{
-    color:#000;
+.elementor-icon-list-text b {
+    color: #000;
 }
 
 li.elementor-icon-list-item.elementor-inline-item {
@@ -255,7 +319,7 @@ li.elementor-icon-list-item.elementor-inline-item {
 
 #masthead li.elementor-icon-list-item.elementor-inline-item {
     width: auto;
-} 
+}
 
 /*@media (max-width: 720px) {
   nav ul     { display: none; }
@@ -279,4 +343,3 @@ li.elementor-icon-list-item.elementor-inline-item {
         padding: 0;
     }
 }
->>>>>>> cdf22be193cc2176b10e10a34152ee6b923af31f
