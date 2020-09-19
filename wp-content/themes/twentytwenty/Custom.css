@@ -321,6 +321,14 @@ li.elementor-icon-list-item.elementor-inline-item {
     width: auto;
 }
 
+.small-txt{    
+    font-size: 16px;text-transform: capitalize;color:#7a7a7a;font-weight:400 !important;
+    display: block;margin: -5px 0 0 !important;
+}
+.small-txt .link-btn{
+    font-size:16px !important;color:#abba28 !important;text-decoration: underline; display: inline !important;
+}
+
 /*@media (max-width: 720px) {
   nav ul     { display: none; }
   nav select { display: inline-block;                  
