@@ -1,6 +1,12 @@
 ﻿#wpcf7-f149-o1 textarea {
     min-height: 65px !important;
 }
+.wpcf7-form #enqtype
+{
+    width:100%;
+    height:50px;
+    margin-bottom:2%;
+}
 .spaceCalculatorModal .modal-dialog, .reserveModal .modal-dialog, .slider-modal .modal-dialog {
     left: 0% !important;
 }
@@ -17,30 +23,31 @@ html #facility-self-service-app .facility-self-service-title
 {
     width:100% !important;
 }
-#menu-sb-footer-menu-1 {
+#menu-sb-footer-menu {
     background: #000000 !important;
+    margin-left: 20%;
 }
 
-    #menu-sb-footer-menu-1 .sub-menu li > a {
+    #menu-sb-footer-menu .sub-menu li > a {
         color: #000000;
         border-bottom: 1px solid #000000;
     }
 
-    #menu-sb-footer-menu-1 .nocls {
+    #menu-sb-footer-menu .nocls {
         margin: 0px !important;
     }
 
-    #menu-sb-footer-menu-1 li > a {
+    #menu-sb-footer-menu li > a {
         padding: 15px 0px !important;
     }
 
-    #menu-sb-footer-menu-1 .sub-menu {
+    #menu-sb-footer-menu .sub-menu {
         border-top: 5px solid #bcbe32;
         border-radius: 0;
         z-index: 100000;
     }
 
-    #menu-sb-footer-menu-1 .menu-item-has-children {
+    #menu-sb-footer-menu .menu-item-has-children {
         width: 75%;
     }
 
