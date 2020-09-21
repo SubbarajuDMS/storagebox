@@ -156,6 +156,10 @@ li.elementor-icon-list-item.elementor-inline-item {
     width: auto;
 }
 
+.footer-width-fixer span.htmenu-icon{
+    margin-top: -7px;
+}
+
 
 
 @media (max-width: 720px) {
@@ -176,6 +180,15 @@ li.elementor-icon-list-item.elementor-inline-item {
         height: 40px;
         width: auto;
     }
+
+    .offer-txt {
+        text-align: center;
+        display: block;
+        color: #fff;
+        font-weight: 100;
+        font-size: 48px;
+        font-family: 'Proxima Nova';
+    }    
 }
 
 ﻿#wpcf7-f149-o1 textarea {
@@ -327,6 +340,21 @@ li.elementor-icon-list-item.elementor-inline-item {
 }
 .small-txt .link-btn{
     font-size:16px !important;color:#abba28 !important;text-decoration: underline; display: inline !important;
+}
+
+.index-cs-list{
+    font-weight: 900;
+}
+
+.elementor-830 li.elementor-icon-list-item {
+    width: 50%;
+    padding: 3% !important;
+    float: left;    
+    display: inline;
+}
+
+.elementor-830 .elementor-tab-title.elementor-active{
+    background: #fff !important;
 }
 
 /*@media (max-width: 720px) {
