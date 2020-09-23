@@ -6,6 +6,7 @@
 		init: function () {
 
 			var widgets = {
+				'elementskit-blog-posts.default': ElementsKit.BlogPosts,
 				'elementskit-countdown-timer.default': ElementsKit.Countdown_Timer,
 				'elementskit-client-logo.default': ElementsKit.Client_Logo,
 				'elementskit-testimonial.default': ElementsKit.Testimonial_Slider,
@@ -30,12 +31,28 @@
 				'elementskit-advanced-toggle.default': ElementsKit.Advanced_Toggle,
 				'elementskit-video-gallery.default': ElementsKit.Video_Gallery,
 				'elementskit-facebook-review.default': ElementsKit.Facebook_Review,
-				'elementskit-zoom.default': ElementsKit.Zoom
+				'elementskit-yelp.default': ElementsKit.Yelp_Review,
+				'elementskit-zoom.default': ElementsKit.Zoom,
+				'elementskit-popup-modal.default': ElementsKit.PopupModal,
+				'elementskit-zoom.default': ElementsKit.Zoom,
+				'elementskit-unfold.default': ElementsKit.Unfold
 			};
 			$.each(widgets, function (widget, callback) {
 				elementor.hooks.addAction('frontend/element_ready/' + widget, callback);
 			});
 		},
+
+        PopupModal: function ($scope){
+            $($scope).find('#ekit-popup-modal-toggler').click(function() {
+                $($scope).find('.ekit-popup-modal').addClass('show')
+            })
+            $($scope).find('.ekit-popup-modal__overlay').click(function() {
+                $($scope).find('.ekit-popup-modal').removeClass('show')
+            })
+            $($scope).find('.ekit-popup-modal__close').click(function() {
+                $($scope).find('.ekit-popup-modal').removeClass('show')
+            })
+        },
 
 		Social_Review_Slider: function ($sliders) {
 			$sliders.each(function () {
@@ -58,11 +75,9 @@
 				$(this).slick(config);
 			})
 		},
-		
-		Facebook_Review: function ($scope) {
-			ElementsKit.Social_Review_Slider($scope.find('.ekit-review-slider-wrapper-facebook'))
-
-			$($scope).find('.more').each(function () {
+        
+        Handle_Review_More: function ($scope) {
+            $($scope).find('.more').each(function () {
 				$(this).click(() => {
 					let span = $($(this).parent().get(0)).find('span').first()
 					if ($(this).data('collapsed') === true) {
@@ -76,6 +91,16 @@
 					$(this).data('collapsed', !$(this).data('collapsed'))
 				})
 			})
+        },
+
+		Facebook_Review: function ($scope) {
+			ElementsKit.Social_Review_Slider($scope.find('.ekit-review-slider-wrapper-facebook'))
+			ElementsKit.Handle_Review_More($scope)
+        },
+    
+		Yelp_Review: function ($scope) {
+			ElementsKit.Social_Review_Slider($scope.find('.ekit-review-slider-wrapper-yelp'))
+            ElementsKit.Handle_Review_More($scope)
 		},
 		
 		Zoom: function( $scope ){
@@ -171,6 +196,21 @@
 						}).trigger('resize');
 					}
 
+					if (!$(this).hasClass('elementskit-dropdown-menu-full_width') && $(this).hasClass('top_position')) {
+                        $(this).on({
+                            mouseenter: function() {
+                                if ($('.default_menu_position').length === 0) {
+                                    $(this).parents('.elementor-section-wrap').addClass('default_menu_position');
+                                }
+                            },
+                            mouseleave: function() {
+                                if ($('.default_menu_position').length !== 0) {
+                                    $(this).parents('.elementor-section-wrap').removeClass('default_menu_position');
+                                }
+                            }
+                        })
+                    }
+
 					if(data_width && data_width !== undefined) {
 						if(typeof data_width === 'string') {
 							if(/^[0-9]/.test(data_width)) {
@@ -257,31 +297,47 @@
 			}, { offset: '100%' });
 		},
 
+		BlogPosts: function ($scope) {
+			var $postItems = $scope.find('.post-items'),
+				isMasonry = $postItems.data('masonry-config');
+
+			if (isMasonry) {
+				$postItems.imagesLoaded(function () {
+					$postItems.masonry();
+				});
+			}
+		},
+
 		Countdown_Timer: function ($scope) {
 			var $el = $scope.find('.ekit-countdown'),
-				config = $el.data();
+				config = $el.data(),
+				elClasses = {
+					inner: 'elementskit-inner-container ekit-countdown-inner',
+					inner2: 'elementskit-inner-container',
+					timer: 'elementskit-timer-content ekit-countdown-inner',
+				};
 			
 			if ($el.length) {
 				switch ($el[0].classList[0]) {
 					case 'elementskit-countdown-timer':
-						config.markup = '<div class="elementskit-timer-container elementskit-days"><div class="elementskit-inner-container"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%-D </span><span class="elementskit-timer-title">' + config.dateEkitDay + '</span></div></div></div>'
-							+	'<div class="elementskit-timer-container elementskit-hours"><div class="elementskit-inner-container"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%H </span><span class="elementskit-timer-title">' + config.dateEkitHour + '</span></div></div></div>'
-							+	'<div class="elementskit-timer-container elementskit-minutes"><div class="elementskit-inner-container"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%M </span><span class="elementskit-timer-title">' + config.dateEkitMinute + '</span></div></div></div>'
-							+	'<div class="elementskit-timer-container elementskit-seconds"><div class="elementskit-inner-container"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%S </span><span class="elementskit-timer-title">' + config.dateEkitSecond + '</span></div></div></div>';
+						config.markup = '<div class="elementskit-timer-container elementskit-days"><div class="'+ elClasses.inner +'"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%-D </span><span class="elementskit-timer-title">' + config.dateEkitDay + '</span></div></div></div>'
+							+	'<div class="elementskit-timer-container elementskit-hours"><div class="'+ elClasses.inner +'"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%H </span><span class="elementskit-timer-title">' + config.dateEkitHour + '</span></div></div></div>'
+							+	'<div class="elementskit-timer-container elementskit-minutes"><div class="'+ elClasses.inner +'"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%M </span><span class="elementskit-timer-title">' + config.dateEkitMinute + '</span></div></div></div>'
+							+	'<div class="elementskit-timer-container elementskit-seconds"><div class="'+ elClasses.inner +'"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%S </span><span class="elementskit-timer-title">' + config.dateEkitSecond + '</span></div></div></div>';
 						break;
 				
 					case 'elementskit-countdown-timer-3':
-						config.markup = '<div class="elementskit-timer-container elementskit-days"><div class="elementskit-timer-content"><div class="elementskit-inner-container"><span class="elementskit-timer-count">%-D </span><span class="elementskit-timer-title">' + config.dateEkitDay + '</span></div></div></div>'
-							+	'<div class="elementskit-timer-container elementskit-hours"><div class="elementskit-timer-content"><div class="elementskit-inner-container"><span class="elementskit-timer-count">%H </span><span class="elementskit-timer-title">' + config.dateEkitHour + '</span></div></div></div>'
-							+	'<div class="elementskit-timer-container elementskit-minutes"><div class="elementskit-timer-content"><div class="elementskit-inner-container"><span class="elementskit-timer-count">%M </span><span class="elementskit-timer-title">' + config.dateEkitMinute + '</span></div></div></div>'
-							+	'<div class="elementskit-timer-container elementskit-seconds"><div class="elementskit-timer-content"><div class="elementskit-inner-container"><span class="elementskit-timer-count">%S </span><span class="elementskit-timer-title">' + config.dateEkitSecond + '</span></div></div></div>';
+						config.markup = '<div class="elementskit-timer-container elementskit-days"><div class="'+ elClasses.timer +'"><div class="'+ elClasses.inner2 +'"><span class="elementskit-timer-count">%-D </span><span class="elementskit-timer-title">' + config.dateEkitDay + '</span></div></div></div>'
+							+	'<div class="elementskit-timer-container elementskit-hours"><div class="'+ elClasses.timer +'"><div class="'+ elClasses.inner2 +'"><span class="elementskit-timer-count">%H </span><span class="elementskit-timer-title">' + config.dateEkitHour + '</span></div></div></div>'
+							+	'<div class="elementskit-timer-container elementskit-minutes"><div class="'+ elClasses.timer +'"><div class="'+ elClasses.inner2 +'"><span class="elementskit-timer-count">%M </span><span class="elementskit-timer-title">' + config.dateEkitMinute + '</span></div></div></div>'
+							+	'<div class="elementskit-timer-container elementskit-seconds"><div class="'+ elClasses.timer +'"><div class="'+ elClasses.inner2 +'"><span class="elementskit-timer-count">%S </span><span class="elementskit-timer-title">' + config.dateEkitSecond + '</span></div></div></div>';
 						break;
 				
 					default:
-						config.markup = '<div class="elementskit-timer-container elementskit-days"><div class="elementskit-inner-container"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%-D </span><span class="elementskit-timer-title">' + config.dateEkitDay + '</span></div></div></div>'
-							+	'<div class="elementskit-timer-container elementskit-hours"><div class="elementskit-inner-container"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%H </span><span class="elementskit-timer-title">' + config.dateEkitHour + '</span></div></div></div>'
-							+	'<div class="elementskit-timer-container elementskit-minutes"><div class="elementskit-inner-container"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%M </span><span class="elementskit-timer-title">' + config.dateEkitMinute + '</span></div></div></div>'
-							+	'<div class="elementskit-timer-container elementskit-seconds"><div class="elementskit-inner-container"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%S </span><span class="elementskit-timer-title">' + config.dateEkitSecond + '</span></div></div></div>';
+						config.markup = '<div class="elementskit-timer-container elementskit-days"><div class="'+ elClasses.inner +'"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%-D </span><span class="elementskit-timer-title">' + config.dateEkitDay + '</span></div></div></div>'
+							+	'<div class="elementskit-timer-container elementskit-hours"><div class="'+ elClasses.inner +'"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%H </span><span class="elementskit-timer-title">' + config.dateEkitHour + '</span></div></div></div>'
+							+	'<div class="elementskit-timer-container elementskit-minutes"><div class="'+ elClasses.inner +'"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%M </span><span class="elementskit-timer-title">' + config.dateEkitMinute + '</span></div></div></div>'
+							+	'<div class="elementskit-timer-container elementskit-seconds"><div class="'+ elClasses.inner +'"><div class="elementskit-timer-content"><span class="elementskit-timer-count">%S </span><span class="elementskit-timer-title">' + config.dateEkitSecond + '</span></div></div></div>';
 						break;
 				}
 
@@ -305,7 +361,7 @@
 					markup = '';
 
 				labels.forEach(function (label, i) {
-					markup += '<div class="elementskit-time ' + labelsClass[i] + '">'
+					markup += '<div class="elementskit-time ' + labelsClass[i] + ' ekit-countdown-inner">'
 						+ '<span class="elementskit-count elementskit-curr elementskit-top"></span>'
 						+ '<span class="elementskit-count elementskit-next elementskit-top"></span>'
 						+ '<span class="elementskit-count elementskit-next elementskit-bottom"></span>'
@@ -430,56 +486,11 @@
 
 		Gallery: function ($scope) {
 			var $galleryGrid = $scope.find('.ekit_gallery_grid'),
-				masonryConfig = $galleryGrid.data('masonry-config');
+				masonryConfig = $galleryGrid.data('grid-config');
 			
-			if (typeof masonryConfig !== 'undefined') {
-				new elementor.modules.Masonry($galleryGrid[0], {
-					itemSelector: '.ekit_gallery_grid_item'
-				});
-			}
-			
-			/*,
-				column = $galleryGrid.data(); gallerycol */
-			
-			// console.log( 'Test 1!' );
-			
-			/*
-			var colWidth = function () {
-					console.log('Test 3!');
-					var w = $galleryGrid.width(),
-						windowWidth = $(window).width(),
-						columnNum,
-						columnWidth = 0;
-					if(windowWidth > 1024) {
-						columnNum = parseInt(column.desktop, 10);
-					} else if(windowWidth >= 768) {
-						columnNum = parseInt(column.tablet, 10);
-					}
-					columnWidth = Math.floor(w / columnNum);
-					$galleryGrid.find('.ekit_gallery_grid_item').each(function () {
-						var $item = $(this),
-							multiplier_w = $item.attr('class').match(/ekit_gallery_grid_item-w(\d)/),
-							width = multiplier_w ? columnWidth * multiplier_w[1] : columnWidth;
-						$item.css({
-							width: width,
-						});
-					});
-					return columnWidth;
-				};
-			*/
-
-			// 	isotopeInit = function () {
-			// 		$galleryGrid.isotope({
-			// 			resizable: false,
-			// 			itemSelector: '.ekit_gallery_grid_item',
-			// 			masonry: {
-			// 				columnWidth: colWidth(),
-			// 				gutterWidth: 0
-			// 			}
-			// 		});
-			// 	};
-			// isotopeInit();
-			// $(window).on('resize load', isotopeInit);
+			$galleryGrid.imagesLoaded(function () {
+				$galleryGrid.isotope(masonryConfig);
+			});
 			
 
 			// Filter List
@@ -505,17 +516,6 @@
 				tiltConfig = $galleryGrid.data('tilt-config');
 			
 			$tiltTargets.tilt(tiltConfig);
-			
-
-			// Isotope
-			// $galleryGrid.imagesLoaded(function () {
-			//     $galleryGrid.isotope();
-			// });
-
-			// $(window).on('scroll', function () {
-			// 	console.log( 'Test 2!' );
-			//     $galleryGrid.isotope('layout');
-			// });
 		},
 
 		MotionText: function ($scope) {
@@ -581,11 +581,11 @@
 		},
 
 		Hotspot: function ($scope) {
-			if ($scope.find('.ekit-location-on-click').length > 0) {
-				$scope.find('.ekit-location-on-click .ekit-location_indicator').on('click', function () {
-					$(this).parents('.ekit-location-on-click').toggleClass('active')
-				})
-			}
+			var $el = $scope.find('.ekit-location-on-click > .ekit-location_indicator');
+			
+			$el.on('click', function () {
+				$(this).parent().toggleClass('active');
+			});
 		},
 
 		Header_Search: function ($scope) {
@@ -614,9 +614,9 @@
 		},
 
 		Team: function ($scope) {
-			var el = $scope.find('.ekit-team-popup');
+			var $el = $scope.find('.ekit-team-popup');
 
-			el.magnificPopup({
+			$el.magnificPopup({
 				type: 'inline',
 				fixedContentPos: true,
 				fixedBgPos: true,
@@ -626,13 +626,13 @@
 				showCloseBtn: false,
 				callbacks: {
 					beforeOpen: function () {
-						this.st.mainClass = "my-mfp-slide-bottom ekit-promo-popup";
+						this.st.mainClass = 'my-mfp-slide-bottom ekit-promo-popup ekit-team-modal';
 					}
 				}
 			});
 
-			$scope.find('.ekit-modal-close').on('click', function () {
-				el.magnificPopup('close');
+			$scope.find('.ekit-team-modal-close').on('click', function () {
+				$el.magnificPopup('close');
 			});
 		},
 
@@ -759,7 +759,7 @@
 					vertical_menu_wraper = $scope.find('.ekit-vertical-main-menu-wraper'),
 					final_width = Math.floor((parents_container.width() - vertical_menu_wraper.width())) + 'px';
 
-				target.each(function () {
+				target.on('hover',function () {
 					let data_width = $(this).data('vertical-menu'),
 						megamenu_panel = $(this).children('.elementskit-megamenu-panel');
 
@@ -915,9 +915,36 @@
 				percentPosition: true,
 				itemSelector: '.ekit-video-item ',
 			});
+		},
+		Unfold: function($scope){
+			var expand_btn = $scope.find('.ekit-unfold-btn'),
+				content_wrapper = $scope.find('.ekit-unfold-wrapper'),
+				content = $scope.find('.ekit-unfold-data'),
+				inner_data = $scope.find('.ekit-unfold-data-inner'),
+				config = content_wrapper.data('config');
+			
+			if(config.collapse_height >= inner_data.outerHeight()){
+				expand_btn.hide();
+				content.addClass('active');
+			}
+
+			expand_btn.on('click', function(){
+				if(!content.hasClass('active')){
+					content.animate({height:inner_data.outerHeight()},(parseInt(config.transition_duration) || 0));
+					$(this).html(config.collapse_text);
+				} else {
+					content.animate({height: config.collapse_height},(parseInt(config.transition_duration) || 0));
+					$(this).html(config.expand_text)
+				}
+				content.toggleClass('active');
+			});
+			
+
 		}
 	};
 	$(window).on('elementor/frontend/init', ElementsKit.init);
+
+
 }(jQuery, window.elementorFrontend));
 
 
