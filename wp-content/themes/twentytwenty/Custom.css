@@ -190,12 +190,12 @@ li.elementor-icon-list-item.elementor-inline-item {
 
 
 @media (max-width: 720px) {
-    nav ul {
+    #servicesidemenu nav ul {
         display: none;
     }
 
-    nav select {
-        display: inline-block;
+    #servicesidemenu nav select {
+        display: inline-block !important;
         width: 100%;
         border: 1px solid #ebebeb;
         padding: 10px;
@@ -421,7 +421,9 @@ li.elementor-icon-list-item.elementor-inline-item {
 .elementor-830 .elementor-element.elementor-element-5c53fec1 > .elementor-widget-container {
     margin: 0 10% 5% !important;
 }
-
+    .searchbutton .btn {
+        padding: 5px 10px !important;
+    }
 
 
   }
@@ -457,7 +459,6 @@ li.elementor-icon-list-item.elementor-inline-item {
 
   }
 
-
 @media screen and (max-width: 960px) {
     .mega-menu-main-menu .main-navigation,
     .mega-menu-main-menu .main-navbar {
@@ -472,3 +473,4 @@ li.elementor-icon-list-item.elementor-inline-item {
         padding: 0;
     }
 }
+
