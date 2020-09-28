@@ -188,7 +188,6 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
 
 
 
-
 ﻿#wpcf7-f149-o1 textarea {
     min-height: 65px !important;
 }
@@ -522,7 +521,6 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
 
   }
 
-
 @media screen and (max-width: 960px) {
     .mega-menu-main-menu .main-navigation,
     .mega-menu-main-menu .main-navbar {
@@ -537,3 +535,4 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
         padding: 0;
     }
 }
+
