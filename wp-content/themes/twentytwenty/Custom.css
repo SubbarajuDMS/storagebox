@@ -175,9 +175,7 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
     color: #000;
 }
 
-li.elementor-icon-list-item.elementor-inline-item {
-    width: 27.5%;
-}
+
 
 #masthead li.elementor-icon-list-item.elementor-inline-item {
     width: auto;
@@ -189,34 +187,7 @@ li.elementor-icon-list-item.elementor-inline-item {
 
 
 
-@media (max-width: 720px) {
-    nav ul {
-        display: none;
-    }
 
-    nav select {
-        display: inline-block;
-        width: 100%;
-        border: 1px solid #ebebeb;
-        padding: 10px;
-        position: flex-top;
-        font-family: 'Proxima Nova';
-    }
-
-    #masthead .elementor-widget-image .elementor-image img {
-        height: 40px;
-        width: auto;
-    }
-
-    .offer-txt {
-        text-align: center;
-        display: block;
-        color: #fff;
-        font-weight: 100;
-        font-size: 48px;
-        font-family: 'Proxima Nova';
-    }    
-}
 
 ﻿#wpcf7-f149-o1 textarea {
     min-height: 65px !important;
@@ -266,6 +237,15 @@ li.elementor-icon-list-item.elementor-inline-item {
         padding: 10px 20px;
     }
 
+    .storage-unit ul{margin: 0 !important;}
+.storage-unit li{ width: calc(100% / 3) !important; margin: 0 !important;
+}
+
+.insurance-list li{ width: calc(100% / 2) !important; margin: 0 !important;
+}
+.insurance-list ul{
+    margin: 0 !important;
+}
 
 /*-Bhagavana-*/
 nav select {
@@ -285,7 +265,7 @@ nav ul li {
         display: block;
         padding: 5px;font-weight: 600;
     }
-    nav ul li a:hover{
+    nav ul li a:hover, a:active, a.focus{
         text-decoration-line: none;color: #abb43a;
     }
 
@@ -304,7 +284,7 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
 }
 
 .dr-list {
-    width: auto;
+    width: 100%;
     border: 1px solid #dadada;
     padding: 5px;
     margin: 0%;
@@ -367,9 +347,9 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
     color: #000;
 }
 
-li.elementor-icon-list-item.elementor-inline-item {
+/*li.elementor-icon-list-item.elementor-inline-item {
     width: 27.5%;
-}
+}*/
 
 #masthead li.elementor-icon-list-item.elementor-inline-item {
     width: auto;
@@ -406,6 +386,38 @@ li.elementor-icon-list-item.elementor-inline-item {
     margin: 0 ;
 }
 
+
+
+
+@media (max-width: 720px) {
+    nav ul {
+        display: none;
+    }
+
+    nav select {
+        display: inline-block;
+        width: 100%;
+        border: 1px solid #ebebeb;
+        padding: 10px;
+        position: flex-top;
+        font-family: 'Proxima Nova';
+    }
+
+    #masthead .elementor-widget-image .elementor-image img {
+        height: 40px;
+        width: auto;
+    }
+
+    .offer-txt {
+        text-align: center;
+        display: block;
+        color: #fff;
+        font-weight: 100;
+        font-size: 48px;
+        font-family: 'Proxima Nova';
+    }    
+}
+
 @media (max-width: 720px) {
 /*  nav ul     { display: none; }
   nav select { display: inline-block;                  
@@ -431,7 +443,37 @@ li.elementor-icon-list-item.elementor-inline-item {
     margin: 0 10% 5% !important;
 }
 
+.location-mobile{
+    display: block !important;background-color: #f0f1f1;
+}
 
+.location-mobile li{
+    display: inline-block;width: 100% !important;
+}
+
+.location-mobile li svg{
+    display: inline-flex;width:auto;
+}
+
+.location-mobile .htmega-verticle-menu ul.menu, .location-mobile .elementor-widget-container{
+    background: none !important;color:#5d5d5d !important;
+}
+
+.location-mobile .htmega-verticle-menu ul.menu li,.location-mobile .htmega-verticle-menu ul.menu li a, .location-mobile .htmega-verticle-menu ul.menu li a i {
+    margin: 0;padding: 5px 15px; color: #5d5d5d !important;
+}
+
+.location-mobile .htmega-verticle-menu ul.menu .sub-menu{
+    border-top: 2px solid #a2ac1e;
+}
+
+.location-mobile .menu-sb-header-business-hours-container{
+    margin-top: -25px;;
+}
+
+.htmega-verticle-menu ul.menu li a{
+    padding-left: 26px;padding-top: 10px;
+}
 
   }
 
@@ -442,17 +484,18 @@ li.elementor-icon-list-item.elementor-inline-item {
         width: 100%;  margin-bottom: 10px;   
     }
     .dr-list{width: 100%;margin: 0;}
-    .elementor-261 .elementor-element.elementor-element-2fb950c8 > .elementor-widget-container {
-        margin: -10px 20px 20px;
-    }
-
-    .elementor-widget-container {
-        margin: -10px 20px 20px !important;
+    
+    .free-quote .elementor-widget-container {
+        margin: -10px auto 20px !important; padding:0 20px;
     }
     .elementor-312 .elementor-element.elementor-element-dbec7dc .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {       
         margin: 0 0 0 25px;
         width: 100%;
     }
+    .storage-unit li{ width: 100% !important; margin: 0 !important;
+    }
+    .insurance-list li{ width:100% !important;}
+    #menu-sb-footer-menu{margin-left:10px;}
 
   }
 
@@ -469,6 +512,13 @@ li.elementor-icon-list-item.elementor-inline-item {
     .elementor-261 .elementor-element.elementor-element-2fb950c8 > .elementor-widget-container {
         margin: -10px 20px 20px;
     }
+    .htmega-verticle-menu ul.menu li a{
+        padding-left: 26px;padding-top: 10px;
+    }
+  
+    .storage-unit li, .insurance-list li{ width: calc(100% / 2) !important; margin: 0 !important;
+}
+
 
   }
 
