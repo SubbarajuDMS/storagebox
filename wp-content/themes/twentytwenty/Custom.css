@@ -19,13 +19,13 @@
 }
 #wpcf7-f977-p561-o1 .wpcf7-submit {
     color: #fff;
-    background-color: #a2ac1e;
+    background-color: #aab31e;
     padding: 8px 30px;
     border: 0 !important;
     border-radius: 0;
     font-weight: 500;
     font-family: 'ProximaNova-Extrabld';
-    text-decoration:none !important;
+    text-decoration: none !important;
 }
 .spaceCalculatorModal .modal-dialog, .reserveModal .modal-dialog, .slider-modal .modal-dialog {
     left: 0% !important;
