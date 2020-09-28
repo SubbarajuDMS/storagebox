@@ -282,8 +282,7 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
     margin: 0.5em 0;
 }
 
-.dr-list {
-    width: 100%;
+.dr-list {    
     border: 1px solid #dadada;
     padding: 5px;
     margin: 0%;
@@ -386,6 +385,33 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
 }
 
 
+
+/*--- New Styles ---*/
+
+.Business-Hours li{
+    margin: 0;
+}
+
+.Business-Hours .htmenu-icon{
+    float:none !important;margin-left: 5px;
+}
+
+.Header-Menu nav ul li a{
+    border:none;
+}
+
+/*---- Breadcrumb----*/
+#angelArrow{
+    font-size: 12px !important;font-weight: bold;
+}
+
+.Header-Breadrumb a{
+    padding: 5px 7px 5px 5px;
+}
+
+.Header-Breadrumb span{
+    padding: 5px;
+}
 
 
 @media (max-width: 720px) {
