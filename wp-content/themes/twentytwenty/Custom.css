@@ -413,6 +413,10 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
     padding: 5px;
 }
 
+.quote-service{
+    text-align: center;
+}
+
 
 @media (max-width: 720px) {
     nav ul {
