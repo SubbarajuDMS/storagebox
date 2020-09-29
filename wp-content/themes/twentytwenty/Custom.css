@@ -292,6 +292,10 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
     min-width: 200px;
 }
 
+.dr-list option{
+    border-bottom: 1px solid #f9f9f9;padding:10px;
+}
+
 .elementor-element-312a781c .elementor-widget-container{
     text-align: center;
 }
@@ -398,6 +402,24 @@ h2.elementor-image-box-title, h3.elementor-image-box-title {
 
 .Header-Menu nav ul li a{
     border:none;
+}
+
+.empty-day{
+color:#415867 !important;min-width: 150px;
+
+}
+
+
+.furniture-van .tableheadcls {
+    font-size: 16px;
+    color: #fff;
+    background-color: #415867;
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+}
+
+.furniture-van .table-responsive > .table{
+    margin: 0;
 }
 
 /*---- Breadcrumb----*/
