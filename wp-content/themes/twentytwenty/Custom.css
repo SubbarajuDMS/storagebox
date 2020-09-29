@@ -1,4 +1,17 @@
-﻿#wpcf7-f149-o1 textarea {
+﻿.slick-next
+{
+    top:40% !important;
+}
+.slick-prev {
+    top: 40% !important;
+}
+#wpcf7-f149-o2 .wpcf7-response-output {
+    color: #ffffff !important;
+}
+#wpcf7-f977-p561-o1 .wpcf7-response-output {
+    color: #000000 !important;
+}
+#wpcf7-f149-o1 textarea {
     min-height: 65px !important;
 }
 .wpcf7-form #enqtype
