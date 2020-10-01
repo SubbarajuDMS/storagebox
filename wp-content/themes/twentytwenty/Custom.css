@@ -5,7 +5,7 @@
 .slick-prev {
     top: 40% !important;
 }
-#wpcf7-f149-o2 .wpcf7-response-output {
+#wpcf7-f149-o1 .wpcf7-response-output {
     color: #ffffff !important;
 }
 #wpcf7-f977-p561-o1 .wpcf7-response-output {
@@ -454,11 +454,11 @@ color:#415867 !important;min-width: 150px;
 
 
 @media (max-width: 720px) {
-    nav ul {
+    #servicesidemenu nav ul {
         display: none;
     }
 
-    nav select {
+    #servicesidemenu nav select {
         display: inline-block;
         width: 100%;
         border: 1px solid #ebebeb;
