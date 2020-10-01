@@ -423,8 +423,7 @@ color:#415867 !important;min-width: 150px;
 }
 
 
-.furniture-van .tableheadcls {
-    font-size: 16px;
+.furniture-van .tableheadcls {   
     color: #fff;
     background-color: #415867;
     font-family: 'Proxima Nova';
@@ -547,8 +546,8 @@ color:#415867 !important;min-width: 150px;
     .elementor-261 .elementor-element.elementor-element-03428e2 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
         width: 100%;  margin-bottom: 10px;   
     }
-    .dr-list{width: 100%;margin: 0;}
-    
+    .dr-list{width: 50%;margin: 0 0 15px;}
+     
     .free-quote .elementor-widget-container {
         margin: -10px auto 20px !important; padding:0 20px;
     }
@@ -556,10 +555,19 @@ color:#415867 !important;min-width: 150px;
         margin: 0 0 0 25px;
         width: 100%;
     }
-    .storage-unit li{ width: 100% !important; margin: 0 !important;
+    .storage-unit li{ width: 50% !important; margin: 0 !important;
     }
-    .insurance-list li{ width:100% !important;}
+    .insurance-list li{ width:50% !important;}
     #menu-sb-footer-menu{margin-left:10px;}
+    .fv-table{
+        font-size: 14px;
+    }
+    .furniture-van, .insurance{
+        font-family: 'Proxima Nova' !important;font-size:14px !important;
+    }
+    .cf-steps .elementor-icon-list-text{
+        font-size: 24px;
+        }
 
   }
 
@@ -572,7 +580,7 @@ color:#415867 !important;min-width: 150px;
     #menu-sb-footer-menu .nocls {
         margin: 0px !important;width: 49%;display: inline-block;
     }
-    .dr-list{width: 100%;margin: 0;}
+    .dr-list{width: 50%;margin: 0 auto 10px;}
     .elementor-261 .elementor-element.elementor-element-2fb950c8 > .elementor-widget-container {
         margin: -10px 20px 20px;
     }
@@ -583,6 +591,9 @@ color:#415867 !important;min-width: 150px;
     .storage-unit li, .insurance-list li{ width: calc(100% / 2) !important; margin: 0 !important;
 }
 
+.cf-steps .elementor-icon-list-text{
+font-size: 24px;
+}
 
   }
 
