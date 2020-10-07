@@ -451,6 +451,14 @@ color:#415867 !important;min-width: 150px;
     text-align: center;
 }
 
+.sb-slider .n2-ow{
+    font-family: 'Proxima Nova' !important;
+}
+
+.sb-banner-ofr{
+    font-weight: 900 !important;color: #aab21e !important;
+}
+
 
 @media (max-width: 720px) {
     #servicesidemenu nav ul {
@@ -467,7 +475,7 @@ color:#415867 !important;min-width: 150px;
     }
 
     #masthead .elementor-widget-image .elementor-image img {
-        height: 40px;
+        
         width: auto;
     }
 
