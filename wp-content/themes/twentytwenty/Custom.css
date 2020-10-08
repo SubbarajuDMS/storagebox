@@ -452,7 +452,7 @@ color:#415867 !important;min-width: 150px;
 }
 
 .sb-slider .n2-ow{
-    font-family: 'Proxima Nova' !important;
+    font-family: 'ProximaNova-Extrabld' !important;
 }
 
 .sb-banner-ofr{
@@ -588,7 +588,7 @@ color:#415867 !important;min-width: 150px;
     #menu-sb-footer-menu .nocls {
         margin: 0px !important;width: 49%;display: inline-block;
     }
-    .dr-list{width: 50%;margin: 0 auto 10px;}
+    .dr-list{width: 50%;margin: -10px auto 20px;}
     .elementor-261 .elementor-element.elementor-element-2fb950c8 > .elementor-widget-container {
         margin: -10px 20px 20px;
     }
@@ -596,13 +596,18 @@ color:#415867 !important;min-width: 150px;
         padding-left: 26px;padding-top: 10px;
     }
   
-    .storage-unit li, .insurance-list li{ width: calc(100% / 2) !important; margin: 0 !important;
-}
+    .storage-unit li, .insurance-list li{ width: calc(100% / 2) !important; margin: 0 !important;}
 
-.cf-steps .elementor-icon-list-text{
-font-size: 24px;
-}
+    .cf-steps .elementor-icon-list-text{
+    font-size: 24px;
+    }
+    
 
+  }
+
+  @media screen and (max-width: 900px) and (min-width:720px){
+    .storage-unit li {
+        width: calc(100% / 2) !important;}
   }
 
 @media screen and (max-width: 960px) {
