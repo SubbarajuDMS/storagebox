@@ -461,6 +461,18 @@ color:#415867 !important;min-width: 150px;
 
 
 @media (max-width: 720px) {
+    .htmega-verticle-menu .sub-menu
+    {
+        min-width:250px !important;
+    }
+    .searchdirection
+    {
+        margin-right:0px !important;
+    }
+    /*.searchbutton .btn
+    {
+        padding:0px !important;
+    }*/
     #servicesidemenu nav ul {
         display: none;
     }
@@ -531,7 +543,7 @@ color:#415867 !important;min-width: 150px;
 }
 
 .location-mobile .htmega-verticle-menu ul.menu li,.location-mobile .htmega-verticle-menu ul.menu li a, .location-mobile .htmega-verticle-menu ul.menu li a i {
-    margin: 0;padding: 5px 15px; color: #5d5d5d !important;
+    margin: 0;padding: 5px 20px; color: #5d5d5d !important;
 }
 
 .location-mobile .htmega-verticle-menu ul.menu .sub-menu{
