@@ -1,12 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\wp-content",
+    "\\wp-content\\plugins\\ht-mega-for-elementor\\assets",
+    "\\wp-content\\plugins\\ht-mega-for-elementor\\assets\\js",
     "\\wp-content\\themes",
     "\\wp-content\\themes\\twentytwenty",
     "\\wp-content\\themes\\twentytwenty\\assets",
     "\\wp-content\\themes\\twentytwenty\\assets\\js"
   ],
-  "SelectedNode": "\\wp-content\\themes\\twentytwenty\\assets\\js\\index.js",
   "PreviewInSolutionExplorer": false
 }
